@@ -18,6 +18,8 @@ var appContext = {
             return false;
         }else{
             users[userName]=user;
+            console.log("现在的用户列表：");
+            console.log(JSON.stringify(users));
             return true;
         }
     },

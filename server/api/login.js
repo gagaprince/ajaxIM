@@ -7,16 +7,24 @@ var login = {
         this.initController();
     },
     initController:function(){
+        console.log("regist api");
         var app = this.app;
-        app.post('/regist',function(req,res){
-            var query  = req.query;
-            console.log(query);
-            var user = {};
+        app.all('/regist',function(req,res){
+            var user = req.body;
             if(appContext.addUser(user)){
                 //如果添加用户成功
                 //发送系统消息
                 appContext.sendNewUserMsg(user);
+                res.send({
+                    code:0
+                });
+            }else{
+                res.send({
+                    code:1,
+                    desc:"添加用户出错"
+                });
             }
+
         });
 
     }
