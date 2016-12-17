@@ -9,17 +9,18 @@ var msgWay = {
     initController:function(){
         var app = this.app;
         app.post('/send',function(req,res){
-            var query  = req.query;
-            console.log(query);
-            //取username  msg 初始化msg 发送
-            var userName = "";
-            var msg = "";
+            var msgObj = req.body;
+            var userName = msgObj.userName;
+            var msg = msgObj.msg;
             appContext.sendUserMsg(userName,msg);
-            res.send("ok");
+            res.send({
+                code:0
+            });
         });
 
         app.post('/receive',function(req,res){
             var msgs = appContext.getMsgs();
+            console.log(JSON.stringify(msgs));
             res.send(msgs);
         });
 

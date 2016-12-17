@@ -30,16 +30,18 @@ var appContext = {
         var userName = user.userName;
         var sex = user.sex;
         var sexMsg = sex=="boy"?"小王子":"小公主";
-        var msg = "欢迎"+sexMsg+userName+"进入聊天室";
+        var msg = "欢迎"+sexMsg+" "+userName+" 进入聊天室";
         this.sendSoftMsg(msg);
     },
     sendSoftMsg:function(str){
         var msg = message.init(this.getUser(softUserName),str);
         msgs.push(msg);
+        console.log(JSON.stringify(msgs));
     },
     sendUserMsg:function(userName,str){
         var msg = message.init(this.getUser(userName),str);
         msgs.push(msg);
+        console.log(JSON.stringify(msgs));
     },
     getMsgs:function(){
         return msgs;

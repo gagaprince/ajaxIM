@@ -7,7 +7,6 @@ var login = {
         this.initController();
     },
     initController:function(){
-        console.log("regist api");
         var app = this.app;
         app.all('/regist',function(req,res){
             var user = req.body;
