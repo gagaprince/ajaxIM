@@ -1,0 +1,18 @@
+1.选择器
+常用 类选择器  id选择器
+2.dom基本操作
+attr  html append addClass removeClass
+3.事件绑定
+on
+4.ajax
+$.ajax({
+    url:url,
+    data:JSON.stringify(data),
+    contentType:"application/json; charset=UTF-8",
+    type : 'POST',
+    dataType : 'json',
+    timeout : 3e4,
+    success:function(res){
+
+    }
+});
