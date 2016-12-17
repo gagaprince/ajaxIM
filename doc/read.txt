@@ -1,0 +1,41 @@
+使用 http://localhost:8080/index.html 访问页面
+接口说明：
+
+注册用户:
+url:http://localhost:8080/regist
+method:post
+data:{
+    userName:"",
+    sex:"boy"
+}
+return:{
+    code:0
+}
+
+发送消息:
+url:http://localhost:8080/send
+method:post
+data:{
+    userName:"",
+    msg:""
+}
+return:{
+    code:0
+}
+
+接收消息:
+url:http://localhost:8080/receive
+method:post
+data:{}
+return:[
+    {
+        user:{
+            userName:"",
+            sex:""
+        },
+        msg:"",
+        time:""
+    }
+    ...
+
+]

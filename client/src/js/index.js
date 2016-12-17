@@ -17,11 +17,7 @@ var main  = {
         $("#registerFrame").show();
     },
     _registe:function(userName){
-        var user = {
-            userName:userName
-        }
-        var sex = Math.random()>0.5?"boy":"girl";
-        user["sex"]=sex;
+
 
     },
     renderTalk:function(msgs){
