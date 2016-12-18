@@ -1,7 +1,7 @@
 1.选择器
 常用 类选择器  id选择器
 2.dom基本操作
-attr  html append addClass removeClass
+attr  html append addClass removeClass show hide
 3.事件绑定
 on
 4.ajax

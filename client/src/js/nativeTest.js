@@ -43,6 +43,8 @@ btn.addEventListener("click",function(){
     var url = "getTest?name=gaga&sex=boy";
     ajax(url,function(res){
         console.log(res);
+        var testDom = document.getElementsByClassName("test")[0];
+        testDom.innerHTML=res;
     });
 },false);
 
